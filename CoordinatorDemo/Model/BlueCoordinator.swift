@@ -16,13 +16,13 @@ final class BlueCoordinator: BaseCoordinator {
         guard let mainNavigationController = rootViewController as? MainNavigationController else { fatalError() }
         let blueFirstViewController: BlueFirstViewController = UIStoryboard.instantiateController(from: .blue)
         blueFirstViewController.message = message
-        mainNavigationController.show(blueFirstViewController, sender: nil)
         blueFirstViewController.tapHandler = { [weak self] in
             self?.showSecondScreen()
         }
         blueFirstViewController.deinitHandler = { [weak self] in
             self?.finishHandler?()
         }
+        mainNavigationController.show(blueFirstViewController, sender: nil)
     }
     
     // MARK: - Private Methods
