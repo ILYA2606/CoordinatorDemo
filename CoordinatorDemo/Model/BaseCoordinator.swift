@@ -11,11 +11,23 @@ import UIKit
 /// Базовый координатор
 class BaseCoordinator: NSObject {
     /// Контроллер, стартующий сценарий координатора
-    weak var rootViewController: UIViewController?
+    private(set) var rootViewController: UIViewController
+    /// Объект, переданный родительским координатором
+    private(set) var object: Any?
     /// Блок завершения сценария координатора
     var finishHandler: VoidHandler?
     /// Дочерние координаторы
     private(set) var childCoordinators = [String: BaseCoordinator]()
+    
+    /**
+     Инициализация координатора
+     - parameter rootViewController: Контроллер, стартующий сценарий координатора
+     - parameter object: Объект, переданный родительским координатором (необязательно)
+     */
+    init(rootViewController: UIViewController, object: Any? = nil) {
+        self.rootViewController = rootViewController
+        self.object = object
+    }
     
     /// Запуск сценария координатора
     func start() {

@@ -12,7 +12,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var mainCoordinator: MainCoordinator?
 
     func application(
         _ application: UIApplication,

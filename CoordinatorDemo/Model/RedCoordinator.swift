@@ -10,19 +10,18 @@ import UIKit
 
 /// Координатор фичи Red
 final class RedCoordinator: BaseCoordinator {
-    var message: String?
     
     weak var redNavigationController: UINavigationController!
     
     override func start() {
         guard let mainNavigationController = rootViewController as? MainNavigationController else { fatalError() }
         let redFirstViewController: RedFirstViewController = UIStoryboard.instantiateController(from: .red)
-        redFirstViewController.message = message
+        redFirstViewController.message = object as? String
         redFirstViewController.showTapHandler = { [weak self] in
             self?.showSecondScreen()
         }
-        redFirstViewController.dismissTapHandler = { [weak self] in
-            self?.dismiss()
+        redFirstViewController.closeTapHandler = { [weak self] in
+            self?.close()
         }
         redFirstViewController.deinitHandler = { [weak self] in
             self?.finishHandler?()
@@ -40,7 +39,7 @@ final class RedCoordinator: BaseCoordinator {
         redNavigationController?.show(redSecondViewController, sender: nil)
     }
     
-    private func dismiss() {
+    private func close() {
         redNavigationController?.dismiss(animated: true)
     }
 }

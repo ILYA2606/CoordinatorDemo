@@ -15,8 +15,9 @@ class MainNavigationController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configRootViewController()
-        MainCoordinator.shared.provideMainNavigationController(self)
-        MainCoordinator.shared.start()
+        let appDelegate = UIApplication.shared.delegate as? AppDelegate
+        appDelegate?.mainCoordinator = MainCoordinator(rootViewController: self)
+        appDelegate?.mainCoordinator?.start()
     }
     
     private func configRootViewController() {

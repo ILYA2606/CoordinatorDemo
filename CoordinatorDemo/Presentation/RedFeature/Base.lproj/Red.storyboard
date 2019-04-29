@@ -18,8 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Red Feature First Screen" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQB-oV-zpq">
-                                <rect key="frame" x="20" y="290.5" width="335" height="86"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Red Feature First Screen" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQB-oV-zpq">
+                                <rect key="frame" x="83.5" y="290.5" width="208.5" height="86"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -34,7 +34,7 @@
                                 <rect key="frame" x="107.5" y="384.5" width="160" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="RbY-Hj-yAl"/>
-                                    <constraint firstAttribute="width" constant="160" id="sUK-jE-NmK"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="sUK-jE-NmK"/>
                                 </constraints>
                                 <state key="normal" title="Show Second Screen">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -47,20 +47,20 @@
                                 <rect key="frame" x="107.5" y="422.5" width="160" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="uGh-iz-bWA"/>
-                                    <constraint firstAttribute="width" constant="160" id="xFI-Fy-DbU"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="xFI-Fy-DbU"/>
                                 </constraints>
-                                <state key="normal" title="Dismiss">
+                                <state key="normal" title="Close">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="tappedToDismiss:" destination="nI3-DL-OKd" eventType="touchUpInside" id="kJV-Ru-BdE"/>
+                                    <action selector="tappedToClose:" destination="nI3-DL-OKd" eventType="touchUpInside" id="oip-Gp-BDH"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.87843137250000003" green="0.4039215686" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Ody-I5-ynl" firstAttribute="leading" secondItem="Gxz-SU-8nQ" secondAttribute="leading" constant="16" id="26s-Zy-p7b"/>
-                            <constraint firstItem="eQB-oV-zpq" firstAttribute="leading" secondItem="Gxz-SU-8nQ" secondAttribute="leading" constant="20" id="3jM-uC-RW3"/>
+                            <constraint firstItem="eQB-oV-zpq" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Gxz-SU-8nQ" secondAttribute="leading" constant="20" id="3jM-uC-RW3"/>
                             <constraint firstItem="EX1-Ln-LPn" firstAttribute="top" secondItem="ue4-hR-OKU" secondAttribute="bottom" constant="8" id="6eo-JJ-EAD"/>
                             <constraint firstItem="EX1-Ln-LPn" firstAttribute="centerX" secondItem="EiL-gX-ze1" secondAttribute="centerX" id="AP4-Il-b2r"/>
                             <constraint firstAttribute="trailing" secondItem="Ody-I5-ynl" secondAttribute="trailing" constant="16" id="AaY-c6-T5B"/>
@@ -69,7 +69,7 @@
                             <constraint firstItem="eQB-oV-zpq" firstAttribute="centerX" secondItem="EiL-gX-ze1" secondAttribute="centerX" id="Wf1-j5-cZ8"/>
                             <constraint firstItem="eQB-oV-zpq" firstAttribute="centerY" secondItem="EiL-gX-ze1" secondAttribute="centerY" id="WqB-GJ-F7j"/>
                             <constraint firstItem="ue4-hR-OKU" firstAttribute="top" secondItem="eQB-oV-zpq" secondAttribute="bottom" constant="8" id="fbn-nD-fGU"/>
-                            <constraint firstItem="Gxz-SU-8nQ" firstAttribute="trailing" secondItem="eQB-oV-zpq" secondAttribute="trailing" constant="20" id="hEz-it-q3Z"/>
+                            <constraint firstItem="Gxz-SU-8nQ" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="eQB-oV-zpq" secondAttribute="trailing" constant="20" id="hEz-it-q3Z"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Gxz-SU-8nQ"/>
                     </view>
@@ -90,8 +90,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Red Feature Second Screen" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Llz-bN-t1Q">
-                                <rect key="frame" x="20" y="290.5" width="335" height="86"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Red Feature Second Screen" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Llz-bN-t1Q">
+                                <rect key="frame" x="61" y="290.5" width="253" height="86"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -99,8 +99,8 @@
                         </subviews>
                         <color key="backgroundColor" red="0.87843137250000003" green="0.4039215686" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Llz-bN-t1Q" firstAttribute="leading" secondItem="tMz-cm-r0k" secondAttribute="leading" constant="20" id="2ep-h8-saF"/>
-                            <constraint firstItem="tMz-cm-r0k" firstAttribute="trailing" secondItem="Llz-bN-t1Q" secondAttribute="trailing" constant="20" id="dU5-Sr-RZA"/>
+                            <constraint firstItem="Llz-bN-t1Q" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="tMz-cm-r0k" secondAttribute="leading" constant="20" id="2ep-h8-saF"/>
+                            <constraint firstItem="tMz-cm-r0k" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Llz-bN-t1Q" secondAttribute="trailing" constant="20" id="dU5-Sr-RZA"/>
                             <constraint firstItem="Llz-bN-t1Q" firstAttribute="centerX" secondItem="44o-4O-heJ" secondAttribute="centerX" id="qJL-M5-GYW"/>
                             <constraint firstItem="Llz-bN-t1Q" firstAttribute="centerY" secondItem="44o-4O-heJ" secondAttribute="centerY" id="xsS-9L-6Ig"/>
                         </constraints>

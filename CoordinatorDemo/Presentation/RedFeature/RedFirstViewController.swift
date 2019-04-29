@@ -13,7 +13,7 @@ class RedFirstViewController: UIViewController {
     @IBOutlet private var messageLabel: UILabel!
     
     var showTapHandler: VoidHandler?
-    var dismissTapHandler: VoidHandler?
+    var closeTapHandler: VoidHandler?
     var deinitHandler: VoidHandler?
     var message: String?
     
@@ -30,8 +30,8 @@ class RedFirstViewController: UIViewController {
         showTapHandler?()
     }
     
-    @IBAction func tappedToDismiss(_ sender: Any) {
-        dismissTapHandler?()
+    @IBAction func tappedToClose(_ sender: Any) {
+        closeTapHandler?()
     }
 }
 

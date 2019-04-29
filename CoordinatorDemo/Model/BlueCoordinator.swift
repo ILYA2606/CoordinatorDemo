@@ -10,12 +10,11 @@ import UIKit
 
 /// Координатор фичи Blue
 final class BlueCoordinator: BaseCoordinator {
-    var message: String?
     
     override func start() {
         guard let mainNavigationController = rootViewController as? MainNavigationController else { fatalError() }
         let blueFirstViewController: BlueFirstViewController = UIStoryboard.instantiateController(from: .blue)
-        blueFirstViewController.message = message
+        blueFirstViewController.message = object as? String
         blueFirstViewController.tapHandler = { [weak self] in
             self?.showSecondScreen()
         }
