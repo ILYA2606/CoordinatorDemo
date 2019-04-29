@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RbF-WT-VSq">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Navigation Controller-->
+        <scene sceneID="x0z-TA-AqE">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="noM-gK-dUn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController storyboardIdentifier="MainNavigationController" id="RbF-WT-VSq" customClass="MainNavigationController" customModule="CoordinatorDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Jkt-eq-syC">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ILI-lQ-KUT"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-260" y="166"/>
+        </scene>
+        <!--Main First View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="MainFirstViewController" id="BYZ-38-t0r" customClass="MainFirstViewController" customModule="CoordinatorDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lZP-IW-1aY">
+                                <rect key="frame" x="16" y="102" width="161" height="47"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="Main Feature">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="tappedMainFeature:" destination="BYZ-38-t0r" eventType="touchUpInside" id="edm-ii-BFg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XnD-0k-N7V">
+                                <rect key="frame" x="16" y="157" width="224" height="47"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="Push Blue Feature"/>
+                                <connections>
+                                    <action selector="tappedBlueFeature:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TTX-c7-09r"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="feU-uG-ag1">
+                                <rect key="frame" x="16" y="212" width="251" height="47"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="Present Red Feature">
+                                    <color key="titleColor" red="0.87843137250000003" green="0.4039215686" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="tappedRedFeature:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aMR-mG-dra"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1019607843" green="0.1058823529" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lZP-IW-1aY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="2t9-GI-biG"/>
+                            <constraint firstItem="XnD-0k-N7V" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="CnI-0j-Jw8"/>
+                            <constraint firstItem="XnD-0k-N7V" firstAttribute="top" secondItem="lZP-IW-1aY" secondAttribute="bottom" constant="8" id="MGi-8M-eq5"/>
+                            <constraint firstItem="feU-uG-ag1" firstAttribute="top" secondItem="XnD-0k-N7V" secondAttribute="bottom" constant="8" id="S8d-Hc-HKa"/>
+                            <constraint firstItem="feU-uG-ag1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="k2U-ES-9Cn"/>
+                            <constraint firstItem="lZP-IW-1aY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="38" id="s7Y-G2-Sm5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ca1-ix-PFe"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="458" y="166"/>
+        </scene>
+        <!--Main Second View Controller-->
+        <scene sceneID="O4m-31-8hv">
+            <objects>
+                <viewController storyboardIdentifier="MainSecondViewController" id="mAh-Mh-2be" customClass="MainSecondViewController" customModule="CoordinatorDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cdA-s6-prJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Main Feature Second Screen" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M3V-Lx-yND">
+                                <rect key="frame" x="20" y="290.5" width="335" height="86"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iOn-at-FZg">
+                                <rect key="frame" x="107.5" y="384" width="160" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="OTJ-yp-ibM"/>
+                                    <constraint firstAttribute="height" constant="30" id="atT-So-QWB"/>
+                                </constraints>
+                                <state key="normal" title="Show Blue Screen">
+                                    <color key="titleColor" red="0.0" green="0.53757702460000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="tappedBlueFeature:" destination="mAh-Mh-2be" eventType="touchUpInside" id="uFy-db-D5H"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VCe-YM-QgB">
+                                <rect key="frame" x="107.5" y="422" width="160" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="Naz-tq-X78"/>
+                                    <constraint firstAttribute="height" constant="30" id="U7F-GM-AT0"/>
+                                </constraints>
+                                <state key="normal" title="Show Red Screen">
+                                    <color key="titleColor" red="0.87843137250000003" green="0.4039215686" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="tappedRedFeature:" destination="mAh-Mh-2be" eventType="touchUpInside" id="5pN-iA-bEE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1019607843" green="0.1058823529" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="M3V-Lx-yND" firstAttribute="centerX" secondItem="cdA-s6-prJ" secondAttribute="centerX" id="1ak-Yf-Z33"/>
+                            <constraint firstItem="M3V-Lx-yND" firstAttribute="centerY" secondItem="cdA-s6-prJ" secondAttribute="centerY" id="DJN-gk-3wg"/>
+                            <constraint firstItem="VCe-YM-QgB" firstAttribute="centerX" secondItem="cdA-s6-prJ" secondAttribute="centerX" id="XPa-Gb-QWH"/>
+                            <constraint firstItem="iOn-at-FZg" firstAttribute="centerX" secondItem="cdA-s6-prJ" secondAttribute="centerX" id="htH-8B-69o"/>
+                            <constraint firstItem="VCe-YM-QgB" firstAttribute="top" secondItem="iOn-at-FZg" secondAttribute="bottom" constant="8" id="ltE-qn-42g"/>
+                            <constraint firstItem="wkC-7Z-saR" firstAttribute="trailing" secondItem="M3V-Lx-yND" secondAttribute="trailing" constant="20" id="oTy-Nm-LhZ"/>
+                            <constraint firstItem="M3V-Lx-yND" firstAttribute="leading" secondItem="wkC-7Z-saR" secondAttribute="leading" constant="20" id="uVk-Al-IUZ"/>
+                            <constraint firstItem="iOn-at-FZg" firstAttribute="top" secondItem="M3V-Lx-yND" secondAttribute="bottom" constant="7.5" id="xe2-qG-rXV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wkC-7Z-saR"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nFQ-zb-GmU" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1199" y="166"/>
+        </scene>
+    </scenes>
+</document>

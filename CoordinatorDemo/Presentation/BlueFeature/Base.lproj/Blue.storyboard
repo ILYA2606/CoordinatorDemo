@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Blue First View Controller-->
+        <scene sceneID="ZW4-Aa-Gj9">
+            <objects>
+                <viewController storyboardIdentifier="BlueFirstViewController" id="MlU-VU-jcc" customClass="BlueFirstViewController" customModule="CoordinatorDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gKq-dU-VaO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blue Feature First Screen" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C7M-cj-PsK">
+                                <rect key="frame" x="20" y="290.5" width="335" height="86"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6GY-qs-i7r">
+                                <rect key="frame" x="107.5" y="384" width="160" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Tr5-rZ-yeh"/>
+                                    <constraint firstAttribute="width" constant="160" id="xJ7-aT-2SF"/>
+                                </constraints>
+                                <state key="normal" title="Show Second Screen">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="tappedToShowSecondScreen:" destination="MlU-VU-jcc" eventType="touchUpInside" id="UQR-KB-aLb"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fza-41-u0K">
+                                <rect key="frame" x="16" y="38" width="343" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.53757702460000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="C7M-cj-PsK" firstAttribute="leading" secondItem="gKq-dU-VaO" secondAttribute="leading" constant="20" id="4OG-LA-Nkh"/>
+                            <constraint firstItem="6GY-qs-i7r" firstAttribute="top" secondItem="C7M-cj-PsK" secondAttribute="bottom" constant="7.5" id="9b6-w8-7Fb"/>
+                            <constraint firstItem="C7M-cj-PsK" firstAttribute="centerY" secondItem="gKq-dU-VaO" secondAttribute="centerY" id="DyN-az-FEa"/>
+                            <constraint firstAttribute="trailing" secondItem="C7M-cj-PsK" secondAttribute="trailing" constant="20" id="EMZ-Hb-bFm"/>
+                            <constraint firstItem="Fza-41-u0K" firstAttribute="leading" secondItem="Ttb-F5-iCD" secondAttribute="leading" constant="16" id="FSC-hJ-9XM"/>
+                            <constraint firstItem="Ttb-F5-iCD" firstAttribute="trailing" secondItem="Fza-41-u0K" secondAttribute="trailing" constant="16" id="Kq2-B5-AdM"/>
+                            <constraint firstItem="Fza-41-u0K" firstAttribute="top" secondItem="Ttb-F5-iCD" secondAttribute="top" constant="18" id="jWt-8G-hNG"/>
+                            <constraint firstItem="6GY-qs-i7r" firstAttribute="centerX" secondItem="gKq-dU-VaO" secondAttribute="centerX" id="kKm-QQ-Ut4"/>
+                            <constraint firstItem="C7M-cj-PsK" firstAttribute="centerX" secondItem="gKq-dU-VaO" secondAttribute="centerX" id="tsJ-Vm-eJJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ttb-F5-iCD"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="0kX-qW-5Sg"/>
+                    <connections>
+                        <outlet property="messageLabel" destination="Fza-41-u0K" id="u9E-OL-R6c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f21-Wi-aRz" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1925.5999999999999" y="895.50224887556226"/>
+        </scene>
+        <!--Blue Second View Controller-->
+        <scene sceneID="0qp-Pl-jmd">
+            <objects>
+                <viewController storyboardIdentifier="BlueSecondViewController" id="dcb-Ty-8yW" customClass="BlueSecondViewController" customModule="CoordinatorDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hEF-ZH-mh7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blue Feature Second Screen" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ru-qJ-L1T">
+                                <rect key="frame" x="20" y="290.5" width="335" height="86"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.53757702460000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="0ru-qJ-L1T" secondAttribute="trailing" constant="20" id="Efy-zg-8dv"/>
+                            <constraint firstItem="0ru-qJ-L1T" firstAttribute="leading" secondItem="hEF-ZH-mh7" secondAttribute="leading" constant="20" id="XeW-fE-KGc"/>
+                            <constraint firstItem="0ru-qJ-L1T" firstAttribute="centerY" secondItem="hEF-ZH-mh7" secondAttribute="centerY" id="bxE-d1-8tR"/>
+                            <constraint firstItem="0ru-qJ-L1T" firstAttribute="centerX" secondItem="hEF-ZH-mh7" secondAttribute="centerX" id="gSR-tu-gWL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="idJ-Ul-Ws5"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="g0c-aH-Bfb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VQr-N3-wUM" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2646" y="896"/>
+        </scene>
+    </scenes>
+</document>
