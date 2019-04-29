@@ -14,7 +14,7 @@ class BaseCoordinator: NSObject {
     weak var rootViewController: UIViewController?
     /// Блок завершения сценария координатора
     var finishHandler: VoidHandler?
-    /// Дочерник координаторы
+    /// Дочерние координаторы
     private(set) var childCoordinators = [String: BaseCoordinator]()
     
     /// Запуск сценария координатора
